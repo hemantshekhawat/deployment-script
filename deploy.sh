@@ -372,23 +372,6 @@ printf "************************************************************************
 
 
 
-###################
-## DOMAINS mappings for virtual host directories
-
-## sellfie-admin
-#     dev-sellfie-admin.sellfie.com         ----> staging-admin.sellfie.com
-#     qa-sellfie-admin.sellfie.com          ----> qa-admin.sellfie.com
-#     pre-prod-sellfie-admin.sellfie.com    ----> pre-prod-sellfie-admin.sellfie.com
-#     prod-sellfie-admin.sellfie.com        ----> admin.sellfie.com
-
-## sellfy
-#     dev-sellfy.sellfie.com                ---->
-#     qa-sellfy.sellfie.com                 ---->
-#     pre-prod-sellfy.sellfie.com           ---->
-#     prod-sellfy.sellfie.com               ---->
-
-
-
 
 ###################
 

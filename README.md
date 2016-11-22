@@ -1,4 +1,4 @@
-# Deployment Script for Selffie Projects
+## Deployment Script for Selffie Projects
       deployment script for Sellfie projects in laravel and Node
 
 
@@ -19,3 +19,25 @@
     ## Sample Command from Local Environment :
     #         ssh -i ~/Documents/keys/Sellfie/selfie_staging.pem ec2-user@52.76.202.101 "sh /home/ec2-user/deploy-my-website.sh dev TagV2.0.1 sellfie-admin dev"
     #         ssh -i !/path/to/ssh/private/key user@host "command to be executed; multiple commands can be separated by | "
+
+
+
+
+
+
+### DOMAIN mappings for virtual host directories
+
+#### sellfie-admin
+     dev-sellfie-admin.sellfie.com         ----> staging-admin.sellfie.com
+     qa-sellfie-admin.sellfie.com          ----> qa-admin.sellfie.com
+     pre-prod-sellfie-admin.sellfie.com    ----> pre-prod-sellfie-admin.sellfie.com
+     prod-sellfie-admin.sellfie.com        ----> admin.sellfie.com
+
+#### sellfy
+     dev-sellfy.sellfie.com                ---->
+     qa-sellfy.sellfie.com                 ---->
+     pre-prod-sellfy.sellfie.com           ---->
+     prod-sellfy.sellfie.com               ---->
+
+
+
