@@ -44,3 +44,27 @@
 
 
 
+
+
+-----
+
+### Server Installation Guide
+
+
+#### Node
+    sudo yum update
+    sudo yum install epel-release
+    sudo yum install nodejs
+    node --version
+    sudo yum install npm
+
+    --- OR ----
+
+    sudo wget https://nodejs.org/dist/latest/node-v7.1.0.tar.gz
+    sudo tar xzvf node-v* && cd node-v*
+    sudo yum install gcc gcc-c++
+    sudo ./configure
+    sudo make
+    sudo make install
+    node --version
+
