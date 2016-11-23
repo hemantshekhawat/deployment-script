@@ -169,14 +169,12 @@ printf "\n\nRoot Directory: $ROOT_DIR\n\n"
 if [[ ! -d $ROOT_DIR ]]; then
   printf "\nGIT Repo not cloned. Clonning now... \n\n"
   #sudo mkdir -p $ROOT_DIR
-  ls -la $ROOT_DIR/../
   sudo chmod -R 777 $HOME/Sellfie/
   # ssh-agent bash -c 'ssh-add $HOME/.ssh/id_rsa.$APP_NAME;'
   git clone $GIT_REPO_LINK $ROOT_DIR
 elif [[ ! -d $ROOT_DIR/.git ]]; then
   printf "\nGIT Repo not cloned. Clonning now... \n\n GIT init in progress\n\n"
   sudo mkdir -p $ROOT_DIR
-  ls -la $ROOT_DIR
   sudo chmod -R 777 $HOME/Sellfie/
   cd $ROOT_DIR
   # ssh-agent bash -c 'ssh-add $HOME/.ssh/id_rsa.$APP_NAME;'
@@ -188,7 +186,7 @@ fi
 cd $ROOT_DIR
 # 1. GIT pull for latest updates
 git reset --hard HEAD
-sudo git checkout $BRANCH_NAME
+sudo git checkout  $BRANCH_NAME
 git pull origin $BRANCH_NAME
 git fetch --prune --tags
 # Check if the tag exists
@@ -323,7 +321,7 @@ sellfie-front-end)
         sudo rm -rf node_modules
         sudo npm install -g gulp
         # sudo npm install process
-        sudo npm install --verbose
+        sudo npm install
         sudo chown -R $USER: node_modules
         sudo gulp build --env=$ENVIRONMENT
 
@@ -372,64 +370,18 @@ printf "************************************************************************
 
 
 
-
 ###################
+## DOMAINS mappings for virtual host directories
 
-#
-# Virtual host Changes
-# For staging/Dev/QA
-#   sudo vim /etc/httpd/conf/httpd.conf
+## sellfie-admin
+#     dev-sellfie-admin.sellfie.com         ----> staging-admin.sellfie.com
+#     qa-sellfie-admin.sellfie.com          ----> qa-admin.sellfie.com
+#     pre-prod-sellfie-admin.sellfie.com    ----> pre-prod-sellfie-admin.sellfie.com
+#     prod-sellfie-admin.sellfie.com        ----> admin.sellfie.com
 
+## sellfy
+#     dev-sellfy.sellfie.com                ---->
+#     qa-sellfy.sellfie.com                 ---->
+#     pre-prod-sellfy.sellfie.com           ---->
+#     prod-sellfy.sellfie.com               ---->
 
-## <VirtualHost *:80>
-#    ServerName staging-admin.sellfie.me
-##       DocumentRoot /var/www/sellfie-admin-app/public
-#        DocumentRoot /var/www/sellfie-admin/public
-#
-#<Directory /var/www/sellfie-admin/>
-#
-#        Options Indexes FollowSymLinks MultiViews
-#        AllowOverride All
-#        Order allow,deny
-#        allow from all
-#
-#</Directory>
-#</VirtualHost>
-#
-#  sudo /etc/init.d/httpd restart
-
-#################################
-# ~/.ssh/config for multiple SSH Keys
-
-
-## Create SSH Keys for GITHUB Deploy Keys
-#  ssh-keygen -t rsa -b 4096 -C "hemant.singh@payu.in"
-#   --Give name as "id_rsa.$APP_NAME"
-#
-## Permisisons
-# sudo chown -R $USER:$USER $HOME/.ssh
-# sudo chmod -R 700 $HOME/.ssh
-# sudo chmod 0600 ~/.ssh/*
-# sudo chown -v $USER ~/.ssh/known_hosts
-
-## Add the SSH Private keys to the cached data
-#  ssh-add ~/.ssh/id_rsa.sellfie-admin
-#  ssh-add ~/.ssh/id_rsa.sellfie-api
-#  ssh-add ~/.ssh/id_rsa.sellfie-frontend
-#  ssh-add ~/.ssh/id_rsa.sellfie-static-site
-#  ssh-add ~/.ssh/id_rsa
-#  ssh-add -l
-
-
-## ~/.ssh/config create the file if missing and add the entries
-
-#Host github.com-sellfie-admin
-#HostName github.com
-# IdentityFile ~/.ssh/id_rsa.sellfie-admin
-#
-# Host github.com-sellfie-api
-# HostName github.com
-#  IdentityFile ~/.ssh/id_rsa.sellfie-api
-# authorized_keys  id_rsa.pub            id_rsa.sellfie-admin.pub  id_rsa.sellfie-api.pub   id_rsa.sellfie-frontend.pub  id_rsa.sellfie-static-site.pub
-# id_rsa           id_rsa.sellfie-admin  id_rsa.sellfie-api        id_rsa.sellfie-frontend  id_rsa.sellfie-static-site   known_hosts
-#

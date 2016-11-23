@@ -51,6 +51,8 @@
 ### Server Installation Guide
 
 
+#### GIT
+    https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 #### Node
     sudo yum update
     sudo yum install epel-release
