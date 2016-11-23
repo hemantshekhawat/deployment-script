@@ -25,6 +25,7 @@ if [ -z "$2" ]
     printf "\nNo Tag Version given: Argument[2] \n\n Exiting... "
     exit 1
 fi
+
 if [ -z "$3" ]
   then
   	   printf "\nMissing  App name : Argument[3] \n\n"
@@ -99,6 +100,16 @@ if [ -z "$4" ]
     ... Exiting... "
     exit 1
 fi
+
+
+if [ "$2" = LATEST ] && [ "$4" != dev ]
+then
+  #statements
+  printf "\n\nLATEST Code can only be deployed to DEV server; \n\n For other environments, please use TAGs ...\n\n"
+  exit 1
+
+fi
+
 case "$4" in
 dev)
       printf "\n\nSelected environment is Development"
@@ -192,18 +203,26 @@ git fetch --prune --tags
 # Check if the tag exists
 # 	if GIT_DIR=$HOME/$APP_NAME/.git git rev-parse $TAG_VERSION >/dev/null 2>&1
 
-printf "\n\nLast 3 tags ...\n"
-git tag | sort -n | tail -3
-	if GIT_DIR=$ROOT_DIR/.git git rev-parse $TAG_VERSION >/dev/null 2>&1
-	then
-    	printf "\nFound tag $TAG_VERSION\n\n"
-	else
-	    printf "\n${2} Tag not found. \n\nExiting..."
-	    exit 1
-	fi
 
-printf "Checking out ${TAG_VERION} into 'release branch' ...\n"
-sudo git checkout tags/$TAG_VERSION -B release
+if [[ $TAG_VERSION -eq 'LATEST' ]];
+  then
+    printf "Checking out Latest Code into 'release' branch ...\n"
+    sudo git checkout  -B release
+else
+
+    printf "\n\nLast 3 tags ...\n"
+    git tag | sort -n | tail -3
+    	if GIT_DIR=$ROOT_DIR/.git git rev-parse $TAG_VERSION >/dev/null 2>&1
+    	then
+        	printf "\nFound tag $TAG_VERSION\n\n"
+    	else
+    	    printf "\n${2} Tag not found. \n\nExiting..."
+    	    exit 1
+    	fi
+
+    printf "Checking out ${TAG_VERION} into 'release branch' ...\n"
+    sudo git checkout tags/$TAG_VERSION -B release
+fi
 
 
 ##############################################################
@@ -367,21 +386,4 @@ ls -la $VIRTUAL_HOST_DIR$ENVIRONMENT-$APP_NAME*
 printf "\n\n********************************************************************************"
 printf "\n\n Awesome ! We are done here\n\n"
 printf "********************************************************************************\n\n"
-
-
-
-###################
-## DOMAINS mappings for virtual host directories
-
-## sellfie-admin
-#     dev-sellfie-admin.sellfie.com         ----> staging-admin.sellfie.com
-#     qa-sellfie-admin.sellfie.com          ----> qa-admin.sellfie.com
-#     pre-prod-sellfie-admin.sellfie.com    ----> pre-prod-sellfie-admin.sellfie.com
-#     prod-sellfie-admin.sellfie.com        ----> admin.sellfie.com
-
-## sellfy
-#     dev-sellfy.sellfie.com                ---->
-#     qa-sellfy.sellfie.com                 ---->
-#     pre-prod-sellfy.sellfie.com           ---->
-#     prod-sellfy.sellfie.com               ---->
 
