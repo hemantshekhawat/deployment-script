@@ -1,19 +1,20 @@
 #/!/bin/bash
 
-# install apache
-yum install nano wget httpd -y
-
 # get some repos
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm
+
+
+# install apache
+yum install nano wget httpd -y
 
 # get latest mysql
 # yum install -y http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm 
 # yum install -y mysql-community-server
 # systemctl enable mysqld.service
 # /bin/systemctl start mysqld.service
-# yum update -y
+yum update -y
 
 yum install -y --enablerepo=remi-php70 php php-apcu php-fpm php-opcache php-cli php-common php-gd php-mbstring php-mcrypt php-pdo php-xml php-mysqlnd
 
