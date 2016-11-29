@@ -21,6 +21,10 @@
      ssh-add -l
 
 
+#### Check if the SSH Agent is running, in case of error , try this
+    eval `ssh-agent -s`
+    ssh-add
+
 #### create the file if missing and add the entries
     ~/.ssh/config 
 
@@ -41,4 +45,8 @@
       IdentityFile ~/.ssh/id_rsa.sellfie-frontend
       IdentitiesOnly yes
 
+    Host github.com-sellfie-static-site
+     HostName github.com
+      IdentityFile ~/.ssh/id_rsa.sellfie-static-site
+      IdentitiesOnly yes
 
