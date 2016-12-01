@@ -4,12 +4,10 @@
 
         
 ### Delete Tags [Local | Remote]    
-    # Delete local tags.
-    git tag -l | xargs git tag -d
     # Fetch remote tags.
     git fetch
     # Delete remote tags.
-    git tag -l | xargs -n 1 git push --delete origin
+    git ls-remote --tags origin | awk '/^(.*)(s+)(.*[a-zA-Z0-9])$/ {print ":" $2}' | xargs git push origin
     # Delete local tasg.
     git tag -l | xargs git tag -d
     
