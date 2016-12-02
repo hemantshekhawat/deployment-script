@@ -31,16 +31,14 @@
 ###mappings for virtual host directories
 
 #### sellfie-admin
-     dev-sellfie-admin.sellfie.com         ----> staging-admin.sellfie.com
-     qa-sellfie-admin.sellfie.com          ----> qa-admin.sellfie.com
-     pre-prod-sellfie-admin.sellfie.com    ----> pre-prod-sellfie-admin.sellfie.com
-     prod-sellfie-admin.sellfie.com        ----> admin.sellfie.com
+     stg-sellfie-admin.sellfie.com         ----> /var/www/dev-admin.sellfie.com
+     qa-sellfie-admin.sellfie.com          ----> /var/www/qa-admin.sellfie.com
+     sbox-sellfie-admin.sellfie.com        ----> /var/www/pre-prod-sellfie-admin.sellfie.com
 
 #### sellfy
-     dev-sellfy.sellfie.com                ---->
-     qa-sellfy.sellfie.com                 ---->
-     pre-prod-sellfy.sellfie.com           ---->
-     prod-sellfy.sellfie.com               ---->
+     stg-sellfy.sellfie.com                ----> /var/www/dev-sellfy
+     qa-sellfy.sellfie.com                 ----> /var/www/
+     sbox-sellfy.sellfie.com               ----> /var/www/
 
 
 
@@ -70,3 +68,13 @@
     sudo make install
     node --version
 
+
+
+#### MySQL 
+
+      sudo yum install mariadb-server mariadb
+      sudo systemctl start mariadb
+      sudo systemctl status mariadb
+      sudo mysql_secure_installation
+      
+      
