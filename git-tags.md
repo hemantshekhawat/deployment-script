@@ -1,5 +1,5 @@
 ### Create Tag
-    git tag -a TagV1.0 -m "first tag with Latest code from Dev"
+    git tag -a TagV1.0.0 -m "first tag with Latest code from Dev"
     git push --follow-tags
 
         
