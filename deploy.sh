@@ -314,6 +314,7 @@ sellfy)
         # Setting folder permissions
         printf "\n\nSetting permissions \n"
         sudo chmod -R 777 storage/ resources/ public/ vendor/ bootstrap/
+        php artisan migrate
         composer dump-autoload
         php artisan cache:clear
         php artisan config:clear
@@ -372,9 +373,12 @@ sellfie-front-end)
 esac
 
 sudo usermod -a -G $USER apache
+sudo usermod -a -G apache $USER
 sudo chmod -R o+x $REPO_CHECKOUT_PATH
 sudo chmod -R o+x $VIRTUAL_HOST_DIR
 sudo chmod -R g+x $REPO_CHECKOUT_PATH $GIT_ROOT_DIR
+
+sudo chown -R $USER:apache $HOME  $VIRTUAL_HOST_DIR $REPO_CHECKOUT_PATH
 
 
 printf "\n\nThe new symbolic link has been associated with the Virtual Host Directory"
@@ -386,4 +390,7 @@ ls -la $VIRTUAL_HOST_DIR$ENVIRONMENT-$APP_NAME*
 printf "\n\n********************************************************************************"
 printf "\n\n Awesome ! We are done here\n\n"
 printf "********************************************************************************\n\n"
+
+
+
 

@@ -43,6 +43,35 @@
 
 
 
+##### Active Domains
+    
+    # ADMIN
+    https://stg-admin.sellfie.me
+    https://qa-admin.sellfie.me
+    https://sbox-admin.sellfie.me
+    
+    # APIs
+    https://stg-mobile-api.sellfie.me
+    https://qa-mobile-api.sellfie.me
+    https://sbox-mobile-api.sellfie.me
+    
+    # PRODUCT/PAYMENT LINK URLS
+    https://stg.sellfie.me/product/xxxxx
+    https://qa.sellfie.me/product/xxxx
+    https://sbox.sellfie.me/product/xxxxx
+    
+    # PROFILE URLS
+    https://stg-profile.sellfie.me/profile-name
+    https://qa-profile.sellfie.me/profile-name
+    https://sbox-profile.sellfie.me/profile-name
+    
+    
+    # WEB APP
+    https://stg-app.sellfie.com
+    https://qa-app.sellfie.com
+    https://sbox-app.sellfie.com
+
+
 
 -----
 
