@@ -348,6 +348,7 @@ sellfie-front-end)
         # sudo npm install process
         printf "\n ---- NPM Install begins.. \n\n"
         sudo npm install
+        sudo npm install gulp-util --save-dev
         printf "\n ---- Setting Permissions.. \n\n"
         sudo chown -R $USER: node_modules
         printf "\n ---- Executing Gulp build with environment=$ENVIRONMENT .. \n\n"
