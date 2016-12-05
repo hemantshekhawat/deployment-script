@@ -341,10 +341,10 @@ sellfie-front-end)
         npm cache clean
         printf "\n ---- Removed Node Modules\n\n"
         sudo rm -rf node_modules
-        printf "\n ---- Installing gulp globally\n\n"
-        npm install -g gulp
-#        printf "\n ---- Installing gulp locally\n\n"
-#        npm install gulp
+#        printf "\n ---- Installing gulp globally\n\n"
+#        npm install -g gulp
+        printf "\n ---- Installing gulp locally\n\n"
+        npm install gulp
         # sudo npm install process
         printf "\n ---- NPM Install begins.. \n\n"
         npm install
