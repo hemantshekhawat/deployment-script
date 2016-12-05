@@ -337,9 +337,14 @@ sellfie-front-end)
         cd $ROOT_DIR
         cd $SUB_APP_NAME
 
-        npm cache clean
+        printf " ---- Cache Clean"
+        sudo npm cache clean
+        printf " ---- Removed Node Modules"
         sudo rm -rf node_modules
+        printf " ---- Installing gulp globally"
         sudo npm install -g gulp
+        printf " ---- Installing gulp locally"
+        sudo npm install gulp
         # sudo npm install process
         sudo npm install
         sudo chown -R $USER: node_modules
