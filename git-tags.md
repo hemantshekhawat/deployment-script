@@ -1,5 +1,8 @@
+### GIT Installation v2.0 for centos [min-requirement]
+    http://tecadmin.net/install-git-2-0-on-centos-rhel-fedora/#
+
 ### Create Tag
-    git tag -a TagV1.0.0 -m "first tag with Latest code from Dev"
+    git tag -a TagV1.0.1 -m "env update"
     git push --follow-tags
 
         
