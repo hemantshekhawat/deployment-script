@@ -339,11 +339,11 @@ sellfie-front-end)
 
         printf "\n ---- Cache Clean"
         sudo npm cache clean
-        printf "\n ---- Removed Node Modules"
+        printf "\n ---- Removed Node Modules\n\n"
         sudo rm -rf node_modules
-        printf "\n ---- Installing gulp globally"
+        printf "\n ---- Installing gulp globally\n\n"
         sudo npm install -g gulp
-        printf "\n ---- Installing gulp locally"
+        printf "\n ---- Installing gulp locally\n\n"
         sudo npm install gulp
         # sudo npm install process
         printf "\n ---- NPM Install begins.. \n\n"
@@ -353,7 +353,7 @@ sellfie-front-end)
         printf "\n ---- Executing Gulp build with environment=$ENVIRONMENT .. \n\n"
         sudo gulp build --env=$ENVIRONMENT
 
-        ls -la $ROOT_DIR/$SUB_APP_NAME/dist/*
+        ls -la $ROOT_DIR/$SUB_APP_NAME/dist/
 
         printf "\n\n Build Completed. Copying the distribution to release directory.. \n\n"
         sudo rsync -azh $ROOT_DIR/$SUB_APP_NAME/dist/* $REPO_CHECKOUT_PATH/
