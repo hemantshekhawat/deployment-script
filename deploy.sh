@@ -338,21 +338,21 @@ sellfie-front-end)
         cd $SUB_APP_NAME
 
         printf "\n ---- Cache Clean"
-        sudo npm cache clean
+        npm cache clean
         printf "\n ---- Removed Node Modules\n\n"
         sudo rm -rf node_modules
         printf "\n ---- Installing gulp globally\n\n"
-        sudo npm install -g gulp
-        printf "\n ---- Installing gulp locally\n\n"
-        sudo npm install gulp
+        npm install -g gulp
+#        printf "\n ---- Installing gulp locally\n\n"
+#        npm install gulp
         # sudo npm install process
         printf "\n ---- NPM Install begins.. \n\n"
-        sudo npm install
-        sudo npm install gulp-util --save-dev
+        npm install
+        npm install gulp-util --save-dev
         printf "\n ---- Setting Permissions.. \n\n"
-        sudo chown -R $USER: node_modules
+        chown -R $USER: node_modules
         printf "\n ---- Executing Gulp build with environment=$ENVIRONMENT .. \n\n"
-        sudo gulp build --env=$ENVIRONMENT
+        gulp build --env=$ENVIRONMENT
 
         ls -la $ROOT_DIR/$SUB_APP_NAME/dist/
 

@@ -89,7 +89,7 @@
 
     --- OR ----
 
-    sudo wget https://nodejs.org/dist/latest/node-v7.1.0.tar.gz
+    sudo wget https://nodejs.org/dist/latest/node-v7.2.0.tar.gz
     sudo tar xzvf node-v* && cd node-v*
     sudo yum install gcc gcc-c++
     sudo ./configure
