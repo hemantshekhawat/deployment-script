@@ -197,7 +197,7 @@ fi
 cd $ROOT_DIR
 # 1. GIT pull for latest updates
 git reset --hard HEAD
-sudo git checkout  $BRANCH_NAME
+git checkout  $BRANCH_NAME
 git pull origin $BRANCH_NAME
 git fetch --prune --tags
 # Check if the tag exists
@@ -207,7 +207,7 @@ git fetch --prune --tags
 if [[ $TAG_VERSION -eq 'LATEST' ]];
   then
     printf "Checking out Latest Code into 'release' branch ...\n"
-    sudo git checkout  -B release
+    git checkout  -B release
 else
 
     printf "\n\nLast 3 tags ...\n"
@@ -221,7 +221,7 @@ else
     	fi
 
     printf "Checking out ${TAG_VERION} into 'release branch' ...\n"
-    sudo git checkout tags/$TAG_VERSION -B release
+    git checkout tags/$TAG_VERSION -B release
 fi
 
 
@@ -340,7 +340,7 @@ sellfie-front-end)
         printf "\n ---- Cache Clean"
         npm cache clean
         printf "\n ---- Removed Node Modules\n\n"
-        sudo rm -rf node_modules
+        rm -rf node_modules
 #        printf "\n ---- Installing gulp globally\n\n"
 #        npm install -g gulp
         printf "\n ---- Installing gulp locally\n\n"
