@@ -46,7 +46,7 @@
 ##### Active Domains
     
     # ADMIN
-    https://stg-admin.sellfie.me
+    https://stg-admin.sellfie.me     
     https://qa-admin.sellfie.me
     https://sbox-admin.sellfie.me
     
@@ -56,20 +56,20 @@
     https://sbox-mobile-api.sellfie.me
     
     # PRODUCT/PAYMENT LINK URLS
-    https://stg.sellfie.me/product/xxxxx
-    https://qa.sellfie.me/product/xxxx
-    https://sbox.sellfie.me/product/xxxxx
+    https://stg.sellfie.me/product/xxxxx        ----> /var/www/stg-sellfy
+    https://qa.sellfie.me/product/xxxx          ----> /var/www/qa-sellfy
+    https://sbox.sellfie.me/product/xxxxx       ----> /var/www/sbox-sellfy
     
     # PROFILE URLS
-    https://stg-profile.sellfie.me/profile-name
-    https://qa-profile.sellfie.me/profile-name
-    https://sbox-profile.sellfie.me/profile-name
+    https://stg-profile.sellfie.me/profile-name       ----> /var/www/stg-sellfie-front-end/sellfie-buyer/
+    https://qa-profile.sellfie.me/profile-name        ----> /var/www/qa-sellfie-front-end/sellfie-buyer/
+    https://sbox-profile.sellfie.me/profile-name      ----> /var/www/sbox-sellfie-front-end/sellfie-buyer/
     
     
     # WEB APP
-    https://stg-app.sellfie.com
-    https://qa-app.sellfie.com
-    https://sbox-app.sellfie.com
+    https://stg-app.sellfie.com           ----> /var/www/stg-sellfie-front-end/sellfie-webapp/                 
+    https://qa-app.sellfie.com            ----> /var/www/stg-sellfie-front-end/sellfie-webapp/
+    https://sbox-app.sellfie.com          ----> /var/www/stg-sellfie-front-end/sellfie-webapp/
 
 
 
