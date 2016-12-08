@@ -352,7 +352,7 @@ sellfie-front-end)
         printf "\n ---- Setting Permissions.. \n\n"
         chown -R $USER: node_modules
         printf "\n ---- Executing Gulp build with environment=$ENVIRONMENT .. \n\n"
-        gulp build --env=$ENVIRONMENT
+        gulp build --server=$ENVIRONMENT
 
         ls -la $ROOT_DIR/$SUB_APP_NAME/dist/
 
