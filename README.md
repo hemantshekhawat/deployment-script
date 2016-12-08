@@ -61,9 +61,9 @@
     https://sbox.sellfie.me/product/xxxxx       ----> /var/www/sbox-sellfy
     
     # PROFILE URLS
-    https://stg-profile.sellfie.me/profile-name       ----> /var/www/stg-sellfie-front-end/sellfie-buyer/
-    https://qa-profile.sellfie.me/profile-name        ----> /var/www/qa-sellfie-front-end/sellfie-buyer/
-    https://sbox-profile.sellfie.me/profile-name      ----> /var/www/sbox-sellfie-front-end/sellfie-buyer/
+    https://stg-profile.sellfie.me/profile-name       ----> /var/www/stg-sellfie-front-end-sellfie-buyer/
+    https://qa-profile.sellfie.me/profile-name        ----> /var/www/qa-sellfie-front-end-sellfie-buyer/
+    https://sbox-profile.sellfie.me/profile-name      ----> /var/www/sbox-sellfie-front-end-sellfie-buyer/
     
     
     # WEB APP
