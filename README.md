@@ -46,13 +46,13 @@
 ##### Active Domains
     
     # ADMIN
-    https://stg-admin.sellfie.me
-    https://qa-admin.sellfie.me
+    https://stg-admin.sellfie.me                                                                                  -- WORKING
+    https://qa-admin.sellfie.me                                                                                  -- WORKING
     https://sbox-admin.sellfie.me
     
     # APIs
-    https://stg-mobile-api.sellfie.me
-    https://qa-mobile-api.sellfie.me
+    https://stg-mobile-api.sellfie.me                                                                          -- WORKING
+    https://qa-mobile-api.sellfie.me                                                                           -- WORKING
     https://sbox-mobile-api.sellfie.me
     
     # PRODUCT/PAYMENT LINK URLS
@@ -67,8 +67,8 @@
     
     
     # WEB APP
-    https://stg-app.sellfie.com
-    https://qa-app.sellfie.com
+    https://stg-app.sellfie.com                                                                              -- WORKING
+    https://qa-app.sellfie.com                                                                               -- WORKING
     https://sbox-app.sellfie.com
 
 
