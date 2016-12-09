@@ -44,39 +44,41 @@
 
 
 ##### Active Domains
+
+    - [STATUS] [URL]            ---> [SERVER POINTS TO REPO LOCATION]
     
     # ADMIN
-    https://stg-admin.sellfie.me                                                                                  -- WORKING
-    https://qa-admin.sellfie.me                                                                                  -- WORKING
-    https://sbox-admin.sellfie.me
+    - [x] https://stg-admin.sellfie.me  
+    - [x] https://qa-admin.sellfie.me 
+    - [ ] https://sbox-admin.sellfie.me
     
     # APIs
-    https://stg-mobile-api.sellfie.me                                                                          -- WORKING
-    https://qa-mobile-api.sellfie.me                                                                           -- WORKING
-    https://sbox-mobile-api.sellfie.me
+    - [x] https://stg-mobile-api.sellfie.me 
+    - [x] https://qa-mobile-api.sellfie.me  
+    - [ ] https://sbox-mobile-api.sellfie.me
     
     # PRODUCT/PAYMENT LINK URLS
-    https://stg.sellfie.me/product/xxxxx        ----> /var/www/stg-sellfy
-    https://qa.sellfie.me/product/xxxx          ----> /var/www/qa-sellfy
-    https://sbox.sellfie.me/product/xxxxx       ----> /var/www/sbox-sellfy
+    - [x] https://stg.sellfie.me/product/xxxxx        ----> /var/www/dev-sellfy
+    - [x] https://qa.sellfie.me/product/xxxx          ----> /var/www/qa-sellfy
+    - [ ] https://sbox.sellfie.me/product/xxxxx       ----> /var/www/sbox-sellfy
     
     # PROFILE URLS
-    https://stg-profile.sellfie.me/profile-name       ----> /var/www/stg-sellfie-front-end-sellfie-buyer/
-    https://qa-profile.sellfie.me/profile-name        ----> /var/www/qa-sellfie-front-end-sellfie-buyer/
-    https://sbox-profile.sellfie.me/profile-name      ----> /var/www/sbox-sellfie-front-end-sellfie-buyer/
+    - [x] https://stg-profile.sellfie.me/profile-name       ----> /var/www/dev-sellfie-front-end-sellfie-buyer/
+    - [x] https://qa-profile.sellfie.me/profile-name        ----> /var/www/qa-sellfie-front-end-sellfie-buyer/
+    - [ ] https://sbox-profile.sellfie.me/profile-name      ----> /var/www/pre-prod-sellfie-front-end-sellfie-buyer/
     
     
     # WEB APP
-    https://stg-app.sellfie.com                                                                              -- WORKING
-    https://qa-app.sellfie.com                                                                               -- WORKING
-    https://sbox-app.sellfie.com
+    - [x] https://stg-app.sellfie.com  
+    - [x] https://qa-app.sellfie.com   
+    - [ ] https://sbox-app.sellfie.com
 
 
 
 -----
 
 ### Server Installation Guide
-
+````
 
 #### GIT
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
