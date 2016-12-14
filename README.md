@@ -48,7 +48,7 @@
     - [STATUS] [URL]            ---> [SERVER POINTS TO REPO LOCATION]
     
     # ADMIN
-    - [x] [StagingAdmin](https://stg-admin.sellfie.me)  
+    - [x] https://stg-admin.sellfie.me  
     - [x] https://qa-admin.sellfie.me 
     - [ ] https://sbox-admin.sellfie.me
     
