@@ -393,6 +393,7 @@ sudo chmod -R g+x $REPO_CHECKOUT_PATH $GIT_ROOT_DIR
 
 sudo chown -R $USER:apache $HOME  $VIRTUAL_HOST_DIR $REPO_CHECKOUT_PATH
 
+sudo systemctl restart httpd
 
 printf "\n\nThe new symbolic link has been associated with the Virtual Host Directory"
 
