@@ -358,6 +358,7 @@ sellfie-front-end)
 
         printf "\n\n Build Completed. Copying the distribution to release directory.. \n\n"
         sudo rsync -azh $ROOT_DIR/$SUB_APP_NAME/dist/* $REPO_CHECKOUT_PATH/
+        sudo rsync -azh $ROOT_DIR/$SUB_APP_NAME/dist/.* $REPO_CHECKOUT_PATH/
 
         cd $REPO_CHECKOUT_PATH
 
